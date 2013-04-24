@@ -1,0 +1,86 @@
+/* Imports */
+@import url("normalize.css");
+@import url("skeleton.css");
+
+body{
+    background-color: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    line-height: 1.35;
+    font-family: 'Helvetica Neue',Arial,sans-serif;
+}
+
+#aboutbar{
+    position: fixed;
+    width: 160px;
+    display: inline;
+}
+
+.container{
+    padding-top: 40px;
+}
+#avatar{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    display: block;
+    width: 140px;
+    border: 2px solid rgb(85, 85, 85);
+}
+#bio{
+    font-size: 0.9em;
+}
+
+#logo{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    line-height: 1.1em;
+    margin-bottom: 5px;
+}
+#logo a, h1 a{
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+#logo a:hover, h1 a:hover{
+    color: rgb(0, 138, 206);
+}
+h1{
+    font-size: 2em;
+    font-family: Georgia,serif;
+    margin-top: 0;
+    line-height: 1em;
+}
+
+a{
+    color: rgb(0, 138, 206);
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(195, 49, 52);
+}
+
+article{
+    margin-bottom: 35px;
+}
+
+.article-date{
+    color: rgb(150, 136, 125);
+    font-size: 1.2em;
+    font-weight: lighter;
+    line-height: 1em;
+    margin: 0;
+}
+article img{
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px 0;
+    width: 100%;
+}
+footer{
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
