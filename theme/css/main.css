@@ -77,7 +77,7 @@ article{
 article img{
     border-radius: 5px 5px 5px 5px;
     margin: 10px 0;
-    width: 100%;
+    max-width: 100%;
 }
 footer{
     text-align: center;
