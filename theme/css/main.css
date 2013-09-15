@@ -80,7 +80,9 @@ article img{
 }
 
 article h2{
-    font-size: 1.2em;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 25px 0 20px;
 }
 
 article p{
