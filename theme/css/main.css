@@ -6,8 +6,9 @@ body{
     background-color: rgb(255, 255, 255);
     color: rgb(51, 51, 51);
     font-size: 16px;
-    line-height: 1.35;
-    font-family: 'Helvetica Neue',Arial,sans-serif;
+    line-height: 1.5625;
+    font-family: 'PT Sans', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 #aboutbar{
@@ -50,7 +51,7 @@ body{
 }
 h1{
     font-size: 2em;
-    font-family: Georgia,serif;
+    font-family: 'PT Serif', Georgia, serif;
     margin-top: 0;
     line-height: 1em;
 }
@@ -69,15 +70,17 @@ article{
 
 .article-date{
     color: rgb(150, 136, 125);
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: lighter;
-    line-height: 1em;
-    margin: 0;
 }
 article img{
     border-radius: 5px 5px 5px 5px;
     margin: 10px 0;
     max-width: 100%;
+}
+
+article p{
+    margin: 25px 0;
 }
 footer{
     text-align: center;
