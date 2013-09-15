@@ -26,13 +26,14 @@ body{
     -webkit-box-sizing:border-box;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     display: block;
     width: 140px;
     border: 2px solid rgb(85, 85, 85);
 }
 #bio{
-    font-size: 0.9em;
+    font-size: 0.95em;
+    line-height: 1.3em;
 }
 
 #logo{
@@ -80,9 +81,9 @@ article img{
 }
 
 article h2{
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: bold;
-    margin: 25px 0 20px;
+    margin-top: 20px;
 }
 
 article p{
