@@ -36,8 +36,8 @@ body{
     line-height: 1.3em;
 }
 
-#bio img{
-    margin: 5px 5px 0 0;
+.social{
+    margin: 10px 7px 0 0;
 }
 
 #logo{
