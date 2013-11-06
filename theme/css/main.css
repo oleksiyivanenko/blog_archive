@@ -69,6 +69,10 @@ a:hover{
     color: rgb(195, 49, 52);
 }
 
+strong{
+    font-weight: bold;
+}
+
 article{
     margin-bottom: 35px;
 }

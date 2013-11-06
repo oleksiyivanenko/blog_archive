@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+        <meta charset="utf-8">
+        <title>CDN для фоток</title>
+        <link rel="stylesheet" href="http://theaksakal.com/theme/css/main.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic|PT+Serif:700&subset=latin,cyrillic">
+        <link href="http://theaksakal.com/feeds/atom.xml" type="application/atom+xml" rel="alternate" title="Алексей Иваненко | Блог Atom Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="three columns sidebar">
+        <div id="aboutbar">
+            <a href="http://theaksakal.com/"><img id="avatar" src="http://theaksakal.com/theme/images/ava.jpg"></img></a>
+            <h3 id="logo"><a href="http://theaksakal.com/">Алексей Иваненко</a></h3>
+            <p id="bio">Учусь в КПИ, работаю Web программистом, увлекаюсь IT.</p>
+            <div id="sosialbar">
+                <a href="mailto:oleksiy.ivanenko@gmail.com"><img class="social" src="http://theaksakal.com/theme/images/email.png"></img></a>
+                <a href="http://twitter.com/IvanenkoOleksiy"><img class="social" src="http://theaksakal.com/theme/images/twitter.png"></img></a>
+                <a href="http://feeds.feedburner.com/theaksakal/GeEH"><img class="social" src="http://theaksakal.com/theme/images/rss.png"></img></a>
+            </div>
+        </div>
+        &nbsp;
+        </div>
+        <section class="twelve columns offset-by-one content">
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://theaksakal.com/posts/photos-cdn" rel="bookmark"
+           title="Permalink to CDN для фоток">CDN для фоток</a></h1>
+      <h6 class="article-date">06.11.2013</h6>
+    </header>
+
+    <div class="entry-content">
+                    <a href="http://theaksakal.com/posts/photos-cdn">
+                    <img class="titleimage" alt="CDN для фоток" src="http://img-fotki.yandex.ru/get/9493/131014935.3/0_b6d94_962fa792_orig"/>
+                </a>
+      <div class="summary">
+        <p>Куда положить фотографии, так, что б они шустрее грузились?</p>
+      </div>
+      <h2>Почему я начал искать другое место для фоток</h2>
+<p>Мой бложек собирается генератором статических сайтов <a href="http://blog.getpelican.com/">pelican</a> и хостится на гитхабе.</p>
+<p>Когда я делал свой блог то не особо задумывался над тем где хранить фотографии к постам, поэтому они так же тихо лежат на гитхабе. Меня это устраивало, до тех пор пока я не заметил, что фотки грузятся реально медленно. Прям, настолько медленно, что я успеваю сходить во вконтакт и вернуться обратно, а картинки еще не догрузились. По моему субъективному мнению, виной всему далекие Американские сервера гитхаба.</p>
+<p>Вот я и решил переместить все фотки блога в другое место. Тем более, что помимо ожидаемого прироста в скорости загрузки, при переносе картинок на другой домен они будут грузиться после основного контента сайта.</p>
+<h2>Какие варианты я рассматривал</h2>
+<p>Куда же все таки сложить все фотографии?</p>
+<p>Главным моим требованием к новому месту хранения изображений была скорость загрузки их из Украины и близь лежащих стран, потому что по данным Google Analytics здесь находится 99% посетителей блога. Также, я обращал внимание на удобство работы с сервисоми.</p>
+<p>В качестве кандидатов я рассматривал:</p>
+<ul>
+<li><a href="http://photo.torba.com/">Торба Фотки</a></li>
+<li><a href="http://fotki.yandex.ru/">Яндекс.Фотки</a></li>
+<li><a href="http://flickr.com/">Flickr</a></li>
+<li><a href="http://dropbox.com/">Dropbox</a></li>
+<li>Свой сервер с nginx-ом в <a href="https://digitalocean.com/">DigitalOcean</a></li>
+<li>Большие настоящие CDN в Amazon или Windows Azure</li>
+</ul>
+<p>Скажу сразу &mdash; до больших CDN-ов я так и не добрался, потому что все они стоят денег, а мне не хотелось попадать на лишние расходы. Хотя, по слухам, у Амазона прям таки офигенский CDN.</p>
+<p>Сервер в <strong>DigitalOcean</strong> тоже сразу отпал, потому что пришлось бы возиться с его настройкой. Не думаю что мои конфиги nginx-а работали б эфективнее чем у ребят, которые занимаются фотохостингами.</p>
+<p>На оставшиеся 4-ре сервиса я загрузил одну и ту же фотку/ И с помощью Developer Tools в Google Chrome измерил скорость загрузки этой фоточки. Так же я учитывал наличие API у сервисов.</p>
+<p><img alt="Скрин измерителя времени" src="http://img-fotki.yandex.ru/get/9114/131014935.3/0_b6d95_c85e76d7_orig" /></p>
+<p>По скорости самый лучший результат показал сервис <strong>Торба</strong> &mdash; у него сервера находятся в UA-IX. С Торбы файлы грузятся раз в 5 быстрее чем с гитхаба. Но, к сожалению у него нет API для загрузки фоточек и очень убогий интерфейс.</p>
+<p>Следующим по скорости были <strong>Яндекс.Фотки</strong> с них грузится раза в 3 быстрее чем сейчас. Также у Яндекса есть замечательное API для управления своими изображениями.</p>
+<p><strong>Flickr</strong> и <strong>Dropbox</strong> остались аутсайдерами, потому что они вобще не дают преимущества в скорости перед гитхабом. Кажись, у них тоже все сервера в США.</p>
+<p>В конечном итоге, я остановился на Яндекс.Фотках. Они немного медленнее чем Торба, но выглядят надежнее и удобнее.</p>
+<h2>Лень &mdash; оружие программиста</h2>
+<p>Для того что бы не париться и не заливать каждый раз фотографии руками я написал небольшой скрипт на python, который делает это за меня.</p>
+<p>В качестве параметра, скрипту передается путь к папке с фотографиями. Программка, используя API Яндекс.Фоток, создает одноименный альбом и загружает туда все фотки из директории.
+Также в процессе загрузки создается файлик-заготовка под новый пост с ссылками на загруженные картинки.</p>
+<p>Скрипт можно взять у меня <a href="https://github.com/epinifrim/bpu">на гитхабе</a>.</p>
+<p>Надеюсь, фоточки у вас теперь грузятся быстрее ;)</p>
+
+    </div><!-- /.entry-content -->
+    
+  </article>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="IvanenkoOleksiy" data-lang="ru" data-size="large" data-count="none">Твитнуть</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<br />
+<a href="http://theaksakal.com">&laquo; Вернуться к списку постов</a>
+</section>
+<footer>
+<hr class="foot"/>
+&copy; Алексей Иваненко, 2013
+</footer>        </section>
+    </div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-40506940-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

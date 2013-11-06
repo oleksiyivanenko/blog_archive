@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Алексей Иваненко | Блог</title><link href="http://theaksakal.com/" rel="alternate"></link><link href="http://theaksakal.com/feeds/atom.xml" rel="self"></link><id>http://theaksakal.com/</id><updated>2013-09-15T00:00:00+03:00</updated><entry><title>Выставка CEE</title><link href="http://theaksakal.com/posts/cee2013" rel="alternate"></link><updated>2013-09-15T00:00:00+03:00</updated><author><name>Алексей Иваненко</name></author><id>tag:theaksakal.com,2013-09-15:posts/cee2013</id><summary type="html">&lt;h2&gt;Про организацию&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Алексей Иваненко | Блог</title><link href="http://theaksakal.com/" rel="alternate"></link><link href="http://theaksakal.com/feeds/atom.xml" rel="self"></link><id>http://theaksakal.com/</id><updated>2013-11-06T00:00:00+02:00</updated><entry><title>CDN для фоток</title><link href="http://theaksakal.com/posts/photos-cdn" rel="alternate"></link><updated>2013-11-06T00:00:00+02:00</updated><author><name>Алексей Иваненко</name></author><id>tag:theaksakal.com,2013-11-06:posts/photos-cdn</id><summary type="html">&lt;h2&gt;Почему я начал искать другое место для фоток&lt;/h2&gt;
+&lt;p&gt;Мой бложек собирается генератором статических сайтов &lt;a href="http://blog.getpelican.com/"&gt;pelican&lt;/a&gt; и хостится на гитхабе.&lt;/p&gt;
+&lt;p&gt;Когда я делал свой блог то не особо задумывался над тем где хранить фотографии к постам, поэтому они так же тихо лежат на гитхабе. Меня это устраивало, до тех пор пока я не заметил, что фотки грузятся реально медленно. Прям, настолько медленно, что я успеваю сходить во вконтакт и вернуться обратно, а картинки еще не догрузились. По моему субъективному мнению, виной всему далекие Американские сервера гитхаба.&lt;/p&gt;
+&lt;p&gt;Вот я и решил переместить все фотки блога в другое место. Тем более, что помимо ожидаемого прироста в скорости загрузки, при переносе картинок на другой домен они будут грузиться после основного контента сайта.&lt;/p&gt;
+&lt;h2&gt;Какие варианты я рассматривал&lt;/h2&gt;
+&lt;p&gt;Куда же все таки сложить все фотографии?&lt;/p&gt;
+&lt;p&gt;Главным моим требованием к новому месту хранения изображений была скорость загрузки их из Украины и близь лежащих стран, потому что по данным Google Analytics здесь находится 99% посетителей блога. Также, я обращал внимание на удобство работы с сервисоми.&lt;/p&gt;
+&lt;p&gt;В качестве кандидатов я рассматривал:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://photo.torba.com/"&gt;Торба Фотки&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://fotki.yandex.ru/"&gt;Яндекс.Фотки&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://flickr.com/"&gt;Flickr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://dropbox.com/"&gt;Dropbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Свой сервер с nginx-ом в &lt;a href="https://digitalocean.com/"&gt;DigitalOcean&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Большие настоящие CDN в Amazon или Windows Azure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Скажу сразу &amp;mdash; до больших CDN-ов я так и не добрался, потому что все они стоят денег, а мне не хотелось попадать на лишние расходы. Хотя, по слухам, у Амазона прям таки офигенский CDN.&lt;/p&gt;
+&lt;p&gt;Сервер в &lt;strong&gt;DigitalOcean&lt;/strong&gt; тоже сразу отпал, потому что пришлось бы возиться с его настройкой. Не думаю что мои конфиги nginx-а работали б эфективнее чем у ребят, которые занимаются фотохостингами.&lt;/p&gt;
+&lt;p&gt;На оставшиеся 4-ре сервиса я загрузил одну и ту же фотку/ И с помощью Developer Tools в Google Chrome измерил скорость загрузки этой фоточки. Так же я учитывал наличие API у сервисов.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Скрин измерителя времени" src="http://img-fotki.yandex.ru/get/9114/131014935.3/0_b6d95_c85e76d7_orig" /&gt;&lt;/p&gt;
+&lt;p&gt;По скорости самый лучший результат показал сервис &lt;strong&gt;Торба&lt;/strong&gt; &amp;mdash; у него сервера находятся в UA-IX. С Торбы файлы грузятся раз в 5 быстрее чем с гитхаба. Но, к сожалению у него нет API для загрузки фоточек и очень убогий интерфейс.&lt;/p&gt;
+&lt;p&gt;Следующим по скорости были &lt;strong&gt;Яндекс.Фотки&lt;/strong&gt; с них грузится раза в 3 быстрее чем сейчас. Также у Яндекса есть замечательное API для управления своими изображениями.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Flickr&lt;/strong&gt; и &lt;strong&gt;Dropbox&lt;/strong&gt; остались аутсайдерами, потому что они вобще не дают преимущества в скорости перед гитхабом. Кажись, у них тоже все сервера в США.&lt;/p&gt;
+&lt;p&gt;В конечном итоге, я остановился на Яндекс.Фотках. Они немного медленнее чем Торба, но выглядят надежнее и удобнее.&lt;/p&gt;
+&lt;h2&gt;Лень &amp;mdash; оружие программиста&lt;/h2&gt;
+&lt;p&gt;Для того что бы не париться и не заливать каждый раз фотографии руками я написал небольшой скрипт на python, который делает это за меня.&lt;/p&gt;
+&lt;p&gt;В качестве параметра, скрипту передается путь к папке с фотографиями. Программка, используя API Яндекс.Фоток, создает одноименный альбом и загружает туда все фотки из директории.
+Также в процессе загрузки создается файлик-заготовка под новый пост с ссылками на загруженные картинки.&lt;/p&gt;
+&lt;p&gt;Скрипт можно взять у меня &lt;a href="https://github.com/epinifrim/bpu"&gt;на гитхабе&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Надеюсь, фоточки у вас теперь грузятся быстрее ;)&lt;/p&gt;</summary></entry><entry><title>Выставка CEE</title><link href="http://theaksakal.com/posts/cee2013" rel="alternate"></link><updated>2013-09-15T00:00:00+03:00</updated><author><name>Алексей Иваненко</name></author><id>tag:theaksakal.com,2013-09-15:posts/cee2013</id><summary type="html">&lt;h2&gt;Про организацию&lt;/h2&gt;
 &lt;p&gt;Я&amp;nbsp;был на&amp;nbsp;выставке в&amp;nbsp;первый ее&amp;nbsp;день. Может чего прикольного было и&amp;nbsp;в&amp;nbsp;воскресенье, но&amp;nbsp;этого я&amp;nbsp;уже не&amp;nbsp;видал.&lt;/p&gt;
 &lt;p&gt;Как я&amp;nbsp;понял, событие организовала компания &lt;a href="http://www.erc.ua/"&gt;ERC&lt;/a&gt;, она&amp;nbsp;же &lt;a href="http://vidopro.ua/"&gt;Vidopro&lt;/a&gt;.
 Поддержку выставки также обеспечивали интернет магазины &lt;a href="http://rozetka.com.ua/"&gt;Rozetka&lt;/a&gt; и&amp;nbsp;&lt;a href="http://www.moyo.ua/"&gt;MOYO&lt;/a&gt;, в&amp;nbsp;которых уже сейчас или уже в&amp;nbsp;ближайшее время можно будет купить все представленые новинки.&lt;/p&gt;
