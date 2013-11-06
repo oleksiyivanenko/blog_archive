@@ -13,7 +13,7 @@ body{
 
 #aboutbar{
     position: fixed;
-    width: 160px;
+    width: 150px;
     display: inline;
 }
 
@@ -28,7 +28,7 @@ body{
     margin-right: auto;
     margin-bottom: 5px;
     display: block;
-    width: 140px;
+    width: 150px;
     border: 2px solid rgb(85, 85, 85);
 }
 #bio{
@@ -89,6 +89,19 @@ article h2{
     font-weight: bold;
     margin-top: 20px;
 }
+article .summary{
+    font-size: 1.24em;
+}
+
+article ul li{
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 0 0 0.25em;
+}
+
+article ul{
+    margin: 0 0 1em;
+}
 
 article p{
     margin: 0 0 1em;
@@ -97,4 +110,14 @@ footer{
     text-align: center;
     margin-bottom: 5px;
     font-size: 0.9em;
+}
+@media only screen and (max-width: 767px) {
+    #aboutbar{
+        position: static;
+        width: 300px;
+        display: block-inline;
+    }
+    #sosialbar{
+        text-align: center;
+    }
 }
