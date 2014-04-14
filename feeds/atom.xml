@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Алексей Иваненко | Блог</title><link href="http://theaksakal.com/" rel="alternate"></link><link href="http://theaksakal.com/feeds/atom.xml" rel="self"></link><id>http://theaksakal.com/</id><updated>2013-11-06T00:00:00+02:00</updated><entry><title>CDN для фоток</title><link href="http://theaksakal.com/posts/photos-cdn" rel="alternate"></link><updated>2013-11-06T00:00:00+02:00</updated><author><name>Алексей Иваненко</name></author><id>tag:theaksakal.com,2013-11-06:posts/photos-cdn</id><summary type="html">&lt;h2&gt;Почему я начал искать другое место для фоток&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Алексей Иваненко | Блог</title><link href="http://theaksakal.com/" rel="alternate"></link><link href="http://theaksakal.com/feeds/atom.xml" rel="self"></link><id>http://theaksakal.com/</id><updated>2014-04-06T00:00:00+03:00</updated><entry><title>Немножко ссылок</title><link href="http://theaksakal.com/posts/links" rel="alternate"></link><updated>2014-04-06T00:00:00+03:00</updated><author><name>Алексей Иваненко</name></author><id>tag:theaksakal.com,2014-04-06:posts/links</id><summary type="html">&lt;p&gt;Не знаю как у вас, а у меня часто бывает, что помню что наталкивался на интересную статью, а потом не могу найти ее повторно.
+Поэтому, решил записывать ссылочки такого рода в небольшие посты. Буду рад если эти ссылочки будут интересны еще комуто&lt;/p&gt;
+&lt;h2&gt;Ссылочки на IT тематику&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://www.lookatme.ru/mag/how-to/jobs/202299-big-data"&gt;Big Data&lt;/a&gt;, советы начинающим от людей, которые этим занимаются&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.wiggy.net/articles/task-queues"&gt;Использование очередей&lt;/a&gt; &amp;mdash; что это, зачем нужны и в чем загвоздки&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.canonical.com/2014/04/02/shutting-down-ubuntu-one-file-services/"&gt;Canonical закрывает Ubuntu one&lt;/a&gt;. Да и правильно в принципе. Сервис они запустили не идейно, поздно и он только надоедал при установке Убунты, нежели упрощал жизнь.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opensource.dropbox.com/"&gt;Dropbox идет в opnesource&lt;/a&gt;. А вот дропбоксы - молодцы, выложили на всеобщее благо кусочки внутренних библиотек.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://frontender.info/dom/"&gt;Что такое DOM&lt;/a&gt;. Очень простое и весьма понятное объяснение конципции DOM&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://tech.dropbox.com/2014/04/introducing-pyston-an-upcoming-jit-based-python-implementation/"&gt;JIT-based Python implementation&lt;/a&gt;. Дропбокс также анонсировал разработку JIT питона.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.huyng.com/posts/python-performance-analysis/"&gt;Анализ производительности python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://mauveweb.co.uk/posts/2014/04/code-quality-good-tools.html"&gt;Инструменты для улучшения качества кода&lt;/a&gt;. Автор рекомендует разные типы тулзовин для улучшения жизни программистов.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Занимательное&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://designcode.io/story"&gt;Повести путешествующего дизайнера&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://games.usvsth3m.com/2048/boobs-edition-21/"&gt;Для почитателей игры 2048&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.patatap.com/"&gt;Сходите посмотрите&lt;/a&gt;, только кнопки слишком быстро не нажимайте&lt;/li&gt;
+&lt;/ol&gt;</summary></entry><entry><title>CDN для фоток</title><link href="http://theaksakal.com/posts/photos-cdn" rel="alternate"></link><updated>2013-11-06T00:00:00+02:00</updated><author><name>Алексей Иваненко</name></author><id>tag:theaksakal.com,2013-11-06:posts/photos-cdn</id><summary type="html">&lt;h2&gt;Почему я начал искать другое место для фоток&lt;/h2&gt;
 &lt;p&gt;Мой бложек собирается генератором статических сайтов &lt;a href="http://blog.getpelican.com/"&gt;pelican&lt;/a&gt; и хостится на гитхабе.&lt;/p&gt;
 &lt;p&gt;Когда я делал свой блог то не особо задумывался над тем где хранить фотографии к постам, поэтому они так же тихо лежат на гитхабе. Меня это устраивало, до тех пор пока я не заметил, что фотки грузятся реально медленно. Прям, настолько медленно, что я успеваю сходить во вконтакт и вернуться обратно, а картинки еще не догрузились. По моему субъективному мнению, виной всему далекие Американские сервера гитхаба.&lt;/p&gt;
 &lt;p&gt;Вот я и решил переместить все фотки блога в другое место. Тем более, что помимо ожидаемого прироста в скорости загрузки, при переносе картинок на другой домен они будут грузиться после основного контента сайта.&lt;/p&gt;

@@ -103,8 +103,14 @@ article ul li{
     margin: 0 0 0.25em;
 }
 
-article ul{
+article ul, article ol{
     margin: 0 0 1em;
+}
+
+article ol li{
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin: 0 0 0.25em;
 }
 
 article p{
@@ -124,4 +130,16 @@ footer{
     #sosialbar{
         text-align: center;
     }
+}
+.pager {
+    font-size: 1.24em;
+    height: 45px;
+}
+.next {
+    float: right;
+    padding: 10px;
+}
+.previous {
+    float: left;
+    padding: 10px;
 }
